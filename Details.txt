@@ -1,0 +1,121 @@
+
+1. Node JS npm project, so we can install external packages
+    1. Create a project for the backend
+    2. npm install <package-name>
+
+2. HTTP Server:
+
+    http --> protocol used to serve files or data via internet
+
+    basic server creation using http create server
+
+    Disadvantages:
+      http: does not provide wide variety of function to support operations like,
+
+        1. body parsing
+        2. changing http methods
+        3. handling middlewares
+        4. proper routing logic is not possible
+
+      We need to manually handle it with a lots of codes
+
+3. Deploying a nodejs application using render.com
+      1. Publish codes to Github
+      2. Log in render.com
+      3. New Web Service
+      4. Choose Repo
+      5. Configure proper cmds
+          1. build cmd ---> npm install
+          2. Start Command ---> whatever the script that You want to run
+      6. Deploy ( Watch out for any errors in the deployment process)
+
+4. Express:
+    APIs using express -
+    why express external module:
+        basic server creation is possible in normal nodejs that involves lot of code with lots of built-in packages
+    
+        Express combines everything and puts together in simple terms
+
+    web framework http server applcation which lets us create APIs
+    in fast and simple ways
+
+4.1: POST-Man
+
+    Tool used to access different API Methods like below,
+      1. GET
+      2. POST
+      3. PUT
+      4. DELETE
+
+5. CRUD Operations with APIs
+   CREATE, READ, UPDATE, DELETE
+
+6. URL Params:
+    Path Params: /:id
+
+        id or name is the path variable/param
+      request.params
+
+      param is *id*
+    
+    Query Params: comes after question mark
+      request.query
+      /todos?deleteId=100
+      param is *deleteId*
+
+7. Request is an object with pre-defined key<->value pairs & methods/functions
+    used to operate on top of the request in-coming
+
+    Eg: request.body gives the payload, 
+    
+    Below are created by expressjs,
+      req.params['<param-name>'] gives the path param. request.query will give the query param
+
+    reference: https://www.tutorialspoint.com/nodejs/nodejs_request_object.htm
+
+8. Resposne:
+    response is an object with pre-defined key<->value pairs & methods
+    used to operate on top of the response out-going
+
+    Express Created funcs,
+      res.send();
+
+    reference: https://www.tutorialspoint.com/nodejs/nodejs_response_object.htm
+
+Tasks:
+
+  Day 33:
+    Nodejs file system Task
+    https://docs.google.com/document/d/1c_u6azHv7AQHse45GGcrCRe78liwv90S5aHwBR7tBP0/edit
+
+    Q1:
+      Write an api ( POST ) with express which will create a file
+      sample-folder/2023-12-02T06:38:44.231Z.txt --> 178979789489386 
+
+      use writeFileSync
+
+      send back proepr repsonse using res.send
+    
+    Q2:
+      write an api ( GET ) with express which will retrieve all the files
+
+      use readdirSync
+
+      send back proepr repsonse( file names ) using res.send
+
+  Day 34: ( Optional - if possible just create the express server and simple crud apis for rooms )
+
+    Nodejs hall booking api task
+    https://docs.google.com/document/d/1rwPQ2LbHtMZajA_GIZfR-Ko2MFueoT82AmfHTK9V-hM/edit
+
+    Entities:
+      /rooms ( CRUD )
+      /bookings ( CRUD )
+      /customers ( CRUD )
+
+    Send the responses appropriately using if else blocks
+
+    Right now write all the apis for CRUD (rooms)
+
+    realational APIs will discuss next week
+
